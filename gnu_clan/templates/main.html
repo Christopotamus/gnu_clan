@@ -2,4 +2,11 @@
 {% block title %}[GNU] Clan{% endblock %}
 {% block body %}
     <div id="main-content"><h1>Welcome to Clan of GNU, followers of St. Ignucius, and missionaries of the GNU way of life.</div>
+    {% if path == "/members" %}
+        Welcome to the members page!
+    {% elif path == "/join" %}
+        Are you ready to swear your life to Saint Ignucius?
+    {% elif path == "/contact" %}
+        We are ready to listen.
+    {% endif %}
 {% endblock %}

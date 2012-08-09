@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-from core.views import main
+from core.views import main, members, join, contact
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -16,4 +16,8 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
     url(r'^$', main),
+    url(r'^home$', main),
+    url(r'^members$', members),
+    url(r'^join$', join),
+    url(r'^contact$', contact),
 )

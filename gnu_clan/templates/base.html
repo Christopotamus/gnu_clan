@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+        <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js'></script>
+        <script src="{{ STATIC_URL }}scripts/nav.js"></script>
+        <LINK href="{{ STATIC_URL }}css/base.css" rel="stylesheet" type="text/css">
         {% block head %}
         <title>
             {% block title %}{% endblock %}
@@ -8,6 +12,8 @@
         {% endblock %}
     </head>
     <body>
+        {% include 'header.html' %}
+        {% include 'nav.html' %}
         {% block body %}
         {% endblock %}
     </body>
